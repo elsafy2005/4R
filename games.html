@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4R | الألعاب</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">4<span class="x">R</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="games.html" class="active">الألعاب</a></li>
+      <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
+      <li><a href="accessories.html" >إكسسوارات كمبيوتر</a></li>
+      <li><a href="mobile.html" >إكسسوارات موبيل</a></li>
+      <li><a href="game-topup.html">شحن الألعاب</a></li>
+      <li><a href="services.html">الصيانة</a></li>
+      <li><a href="reviews.html">التقييمات</a></li>
+      <li><a href="contact.html">تواصل معنا</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="nav-cart">🛒 السلة<span class="cart-badge">0</span></a>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="games.html" class="active">الألعاب</a></li>
+    <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
+    <li><a href="accessories.html" >إكسسوارات كمبيوتر</a></li>
+      <li><a href="mobile.html" >إكسسوارات موبيل</a></li>>
+    <li><a href="game-topup.html">شحن الألعاب</a></li>
+    <li><a href="services.html">الصيانة</a></li>
+    <li><a href="reviews.html">التقييمات</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+    <li><a href="cart.html">🛒 السلة</a></li>
+  </ul>
+  <div class="mobile-menu-footer">
+    <a href="https://wa.me/201060842931" target="_blank" rel="noreferrer">💬 واتساب: 01060842931</a>
+  </div>
+</div>
+
+<main>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">الرئيسية</a><span class="sep">/</span><span>الألعاب</span></div>
+      <div class="page-header-row">
+        <h1 class="page-title">🎮 الألعاب</h1>
+        <a href="game-topup.html" class="btn btn-red btn-sm">شحن الألعاب ←</a>
+      </div>
+    </div>
+  </div>
+
+  
+  <div style="background:var(--dark);border-bottom:1px solid var(--border);padding:16px 0">
+    <div class="container" style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-red btn-sm filter-btn" data-filter="all" onclick="filterGames('all',this)">الكل</button>
+      <button class="btn btn-outline btn-sm filter-btn" data-filter="ps5" onclick="filterGames('ps5',this)">PlayStation 5</button>
+      <button class="btn btn-outline btn-sm filter-btn" data-filter="xbox" onclick="filterGames('xbox',this)">Xbox</button>
+      <button class="btn btn-outline btn-sm filter-btn" data-filter="pc" onclick="filterGames('pc',this)">PC</button>
+      <button class="btn btn-outline btn-sm filter-btn" data-filter="ps4" onclick="filterGames('ps4',this)">PlayStation 4</button>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="products-grid" id="gamesGrid">
+
+        
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://images4.alphacoders.com/177/177794.jpg"
+                 alt="GTA V"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/1a0000/cc0000?text=GTA+V'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">GTA V — Grand Theft Auto 5</div>
+            <div class="product-specs">أكشن مغامرة | العالم المفتوح | 2025</div>
+            <div class="product-footer">
+              <div><div class="product-price">60 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('gta5','GTA V',60,'🎮')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://www.nyfa.edu/wp-content/uploads/2022/11/Ghost-of-Tsushima-Directors-Cut.jpeg"
+                 alt="Ghost of Tsushima"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Ghost+of+Tsushima'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Ghost of Tsushima</div>
+            <div class="product-specs">أكشن RPG | خرافي | 2021</div>
+            <div class="product-footer">
+              <div><div class="product-price">60 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('tsushima','Ghost of Tsushima',60,'⛩️')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://th.bing.com/th/id/R.adfd670a72555407dd5617a1ac437653?rik=t%2fw4oytdK6l1oQ&pid=ImgRaw&r=0"
+                 alt="God of War Ragnarok"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=God+of+War'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">God of War Ragnarok</div>
+            <div class="product-specs">أكشن RPG | خرافي | 2022</div>
+            <div class="product-footer">
+              <div><div class="product-price">80 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('ragnarok','God of War Ragnarok',80,'⚔️')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.xUDdzzzwfzZvXKZ1jPJVZQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Wo Long"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Wo+Long'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Wo Long</div>
+            <div class="product-specs">أكشن | خرافي | 2024</div>
+            <div class="product-footer">
+              <div><div class="product-price">40 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('wolong','Wo Long',40,'🐉')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://www.allkeyshop.com/blog/wp-content/uploads/FIFA-22n-1.jpg"
+                 alt="FIFA 22"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=FIFA+22'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">FIFA 22</div>
+            <div class="product-specs">كرة قدم | Ultimate Team | 2022</div>
+            <div class="product-footer">
+              <div><div class="product-price">50 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('fifa22','FIFA 22',50,'⚽')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://th.bing.com/th/id/R.b1f13fe1a182a3925152b6468af283a2?rik=Hvn25jQSFxSp1g&pid=ImgRaw&r=0"
+                 alt="Sekiro-Shadows Die Twice"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Sekiro-Shadows+Die+Twice'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Sekiro-Shadows Die Twice</div>
+            <div class="product-specs">أكشن | مغامرة | 2019</div>
+            <div class="product-footer">
+              <div><div class="product-price">30 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('sekiro','Sekiro-Shadows Die Twice',30,'🥇')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/FXVyH9jDpcyB4Mx8rx30bzVC6We_fJ6Low_KseTTcfw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvMTI5/ODU2Mi5qcGc"
+                 alt="DAYS GONE"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=DAYS+GONE'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">DAYS GONE</div>
+            <div class="product-specs">أكشن | مغامرة | 2025</div>
+            <div class="product-footer">
+              <div><div class="product-price">60 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('daysgone','DAYS GONE',60,'☢️')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.WZRPJa0FJh0f0OqycALMiAHaFj?rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="MAFIA III"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=MAFIA+III'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">MAFIA III</div>
+            <div class="product-specs">أكشن | مغامرة | 2016</div>
+            <div class="product-footer">
+              <div><div class="product-price">40 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('mafia3','MAFIA III',40,'🔫')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.ELhJBQSVo5kZRZtVW2LJZgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Max Payne 3"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Max+Payne+3'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Max Payne 3</div>
+            <div class="product-specs">أكشن | مغامرة | 2012</div>
+            <div class="product-footer">
+              <div><div class="product-price">30 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('maxpayne3','Max Payne 3',30,'🎮')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.ExhoOWnxnKFg4ONgP0siCgHaLH?rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Hollow Knight Silksong"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Hollow+Knight+Silksong'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Hollow Knight Silksong</div>
+            <div class="product-specs">RPG | خيال | تعاون</div>
+            <div class="product-footer">
+              <div><div class="product-price">25 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('hks','Hollow Knight Silksong',25,'🦋')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.0L5Kmj3hq5fAMdyaYEECRwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Tom Clancy's Ghost Recon - Wildlands"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Tom+Clancy\'s+Ghost+Recon+-+Wildlands'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Tom Clancy's Ghost Recon - Wildlands</div>
+            <div class="product-specs">أكشن | مغامرة | 2017</div>
+            <div class="product-footer">
+              <div><div class="product-price">60 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('grw','Tom Clancy s Ghost Recon - Wildlands',60,'🌲')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.ITmqwcPX22FPtghTlf-hNAHaHa?w=800&h=800&rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="HITMAN 3"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=HITMAN+3'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">HITMAN 3</div>
+            <div class="product-specs">أكشن | مغامرة | 2021</div>
+            <div class="product-footer">
+              <div><div class="product-price">40 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('hitman3','HITMAN 3',40,'�')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.8ZisoKTQJTmZLeVwtxTdoAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="A Way Out"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=A+Way+Out'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">A Way Out</div>
+            <div class="product-specs">أكشن | 2 لاعبين | 2018</div>
+            <div class="product-footer">
+              <div><div class="product-price">25 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('awayout','A Way Out',25,'🧔🏼')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://th.bing.com/th/id/R.f6e2b29ad5c8455fb189a8be6e3938c6?rik=fuZCF9qaGm9W7Q&pid=ImgRaw&r=0"
+                 alt="Alan Wake Remastered"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Alan+Wake+Remastered'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Alan Wake Remastered</div>
+            <div class="product-specs">أكشن | مغامرة | 2021</div>
+            <div class="product-footer">
+              <div><div class="product-price">30 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('alanwake','Alan Wake Remastered',30,'🕵️')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://th.bing.com/th/id/OIP.JboCVInuTQ-CtaHwlSWszAHaIa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Assassin's Creed - Odyssey"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Assassins+Creed+-+Odyssey'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Assassin's Creed - Odyssey</div>
+            <div class="product-specs">أكشن | مغامرة | 2018</div>
+            <div class="product-footer">
+              <div><div class="product-price">40 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('assassinscreedodyssey','Assassins Creed - Odyssey',40,'🛡')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://th.bing.com/th/id/R.06cfc6b0b78c82a2dd8e66e23a174871?rik=YfBt0DVrpppkow&pid=ImgRaw&r=0"
+                 alt="Assassin's Creed Brotherhood"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Assassins+Creed+-+Brotherhood'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Assassin's Creed Brotherhood</div>
+            <div class="product-specs">أكشن | مغامرة | 2010</div>
+            <div class="product-footer">
+              <div><div class="product-price">10 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('assassinscreedbrotherhood','Assassins Creed Brotherhood',10,'🏰')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.QSJDcP75cIzPgsV8ITudTwAAAA?w=470&h=275&rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Assassin's Creed IV Black Flag"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Assassins+Creed+-+IV+Black+Flag'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Assassin's Creed IV Black Flag</div>
+            <div class="product-specs">أكشن | مغامرة | 2013</div>
+            <div class="product-footer">
+              <div><div class="product-price">25 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('assassinscreediv','Assassins Creed IV Black Flag',25,'🏴')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://xblafans.com/wp-content/uploads/2013/09/AC_Liberation_HD.jpg"
+                 alt="Assassin's Creed Liberation HD"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Assassins+Creed+-+Liberation+HD'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Assassin's Creed Liberation HD</div>
+            <div class="product-specs">أكشن | مغامرة | 2014</div>
+            <div class="product-footer">
+              <div><div class="product-price">10 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('assassinscreedliberation','Assassins Creed Liberation HD',10,'🏰')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://store-images.s-microsoft.com/image/apps.33763.68435629101394993.f73c8e13-1450-4435-8d9b-b3a9a78d1f89.61651b94-6ba7-478c-bcfa-45d13f27ec1e?q=90&w=480&h=270"
+                 alt="Assassin's Creed Rogue"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Assassins+Creed+-+Rogue'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Assassin's Creed Rogue</div>
+            <div class="product-specs">أكشن | مغامرة | 2014</div>
+            <div class="product-footer">
+              <div><div class="product-price">15 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('assassinscreedrogue','Assassins Creed Rogue',15,'🏰')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://www.psu.com/wp/wp-content/uploads/2018/11/Battlefield-V-review.jpg"
+                 alt="Battlefield V"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Battlefield+V'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Battlefield V</div>
+            <div class="product-specs">أكشن | مغامرة | 2018</div>
+            <div class="product-footer">
+              <div><div class="product-price">40 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('battlefieldv','Battlefield V',40,'💣')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.oqPdy5yMwxTEFcPlLKPfMgHaHa?w=500&h=500&rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Ben 10 PowerTrip"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Ben+10+PowerTrip'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Ben 10 PowerTrip</div>
+            <div class="product-specs">كرتون | مغامرة | 2020</div>
+            <div class="product-footer">
+              <div><div class="product-price">10 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('ben10powertrip','Ben 10 PowerTrip',10,'🛸')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.-61kwjjyO8ooSklcz9XP8QHaEP?w=1232&h=706&rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Call of Duty - Modern Warfare II"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Call+of+Duty+-+Modern+Warfare+II'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Call of Duty - Modern Warfare II</div>
+            <div class="product-specs">أكشن | مغامرة | 2022</div>
+            <div class="product-footer">
+              <div><div class="product-price">40 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('callofdutymodernwarfareii','Call of Duty - Modern Warfare II',40,'💣')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.PwFZExxzG62fIYbTgPB9XQHaJj?rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Call of Duty - Modern Warfare Remastered"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Call+of+Duty+-+Modern+Warfare+Remastered'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Call of Duty - Modern Warfare Remastered</div>
+            <div class="product-specs">أكشن | مغامرة | 2016</div>
+            <div class="product-footer">
+              <div><div class="product-price">40 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('callofdutymodernwarfareRemastered','Call of Duty - Modern Warfare Remastered',40,'🗺')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://cdn-cf.gamivo.com/image_original.jpg?f=207664&n=b7f63e00-99b5-11ea-ab08-99bfd4898854.jpg&h=748fdf02b77c39c32b5f50a987c4816b"
+                 alt="Call of Duty WWII"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Call+of+Duty+WWII'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Call of Duty WWII</div>
+            <div class="product-specs">أكشن | مغامرة | 2017</div>
+            <div class="product-footer">
+              <div><div class="product-price">40 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('callofdutywwii','Call of Duty WWII',40,'🗺')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://images.g2a.com/470x276/1x1x0/dying-light-definitive-edition-pc-steam-key-global-i10000001162033/45228a8f0aee4920964a904b"
+                 alt="Dying Light"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Dying+Light'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Dying Light</div>
+            <div class="product-specs">زومبي | مغامرة | 2015</div>
+            <div class="product-footer">
+              <div><div class="product-price">35 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('dyinglight','Dying Light',35,'🧟‍♂️')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.KLtZQBoyrWVPLEEVxip0pQHaDV?w=555&h=250&rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Far Cry 4"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Far+Cry+4'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Far Cry 4</div>
+            <div class="product-specs">أكشن | مغامرة | 2014</div>
+            <div class="product-footer">
+              <div><div class="product-price">30 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('farcry4','Far Cry 4',30,'🌴')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.gUoug3k9ahd2MF4z-jaDBAHaHh?rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Grand Theft Auto 2"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Grand+Theft+Auto+2'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Grand Theft Auto 2</div>
+            <div class="product-specs">أكشن | مغامرة | 2000</div>
+            <div class="product-footer">
+              <div><div class="product-price">5 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('gta2','Grand Theft Auto 2',5,'🚗')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://wallpaperaccess.com/full/5702085.jpg"
+                 alt="GTA III"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=GTA+III'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">GTA III</div>
+            <div class="product-specs">أكشن | مغامرة | 2003</div>
+            <div class="product-footer">
+              <div><div class="product-price">5 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('gta3','GTA III',5,'🚗')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.zwq0_kygwDv4XV23TVeKTAHaEK?w=959&h=539&rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="DIRT 5"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=DIRT+5'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">DIRT 5</div>
+            <div class="product-specs">سباقات  | سيارات | 2020</div>
+            <div class="product-footer">
+              <div><div class="product-price">5 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('Dirt5','DIRT 5',30,'🚗')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/394360/67bbd0057627fc2244793bcdd09260c2539499cf/header.jpg?t=1747327288"
+                 alt="Hearts of Iron IV"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Hearts+of+Iron+IV'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Hearts of Iron IV</div>
+            <div class="product-specs">استراتيجية | حروب | 2016</div>
+            <div class="product-footer">
+              <div><div class="product-price">15 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('hoi4','Hearts of Iron IV',15,'🏰')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.zTWuPKI68pw79ICJTbuLTAHaD9?w=700&h=375&rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Red Dead Redemption 2"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Lies+of+P'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Red Dead Redemption 2</div>
+            <div class="product-specs">أكشن | مغامرة | 2018</div>
+            <div class="product-footer">
+              <div><div class="product-price">90 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('redddeadredemption2','Red Dead Redemption 2',90,'🤠')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.A0I3uBHLfy7Kbnz_39bo0wHaEU?rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Blur"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Little+Nightmares+II'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">BLUR</div>
+            <div class="product-specs">سيارات | ثنائيه | 2010</div>
+            <div class="product-footer">
+              <div><div class="product-price">10 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('blur','Blur',10,'🚗')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://th.bing.com/th/id/R.198d62a3c5470d7add0da6303cedb6f3?rik=RTt25YQeNKsxuA&pid=ImgRaw&r=0"
+                 alt="Mafia - Definitive Edition"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Mafia+-+Definitive+Edition'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Mafia - Definitive Edition</div>
+            <div class="product-specs">أكشن | مغامرة | 2020</div>
+            <div class="product-footer">
+              <div><div class="product-price">25 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('mafia','Mafia - Definitive Edition',25,'🏙️')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.UQGmBsZW-lbIOs6IwGf92QHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Mafia II - Definitive Edition"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Mafia+II+-+Definitive+Edition'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Mafia II - Definitive Edition</div>
+            <div class="product-specs">أكشن | مغامرة | 2020</div>
+            <div class="product-footer">
+              <div><div class="product-price">30 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('mafia2','Mafia II - Definitive Edition',30,'🏙️')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.JsptK0tSTiRpuX5twFAJQgHaEK?w=768&h=432&rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Need for Speed Most Wanted - Limited Edition"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Need+for+Speed+Most+Wanted+-+Limited+Edition'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Need for Speed Most Wanted - Limited Edition</div>
+            <div class="product-specs">سباق | سيارات | 2012</div>
+            <div class="product-footer">
+              <div><div class="product-price">10 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('needforspeed','Need for Speed Most Wanted - Limited Edition',10,'🏎️')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://th.bing.com/th/id/OIP.8D6ftzqLBEW-h0MgRt8hUAHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="PES 2025"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=PES+2025'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">PES 2026</div>
+            <div class="product-specs">كرة قدم | لعب | 2026</div>
+            <div class="product-footer">
+              <div><div class="product-price">50 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('pes2026','PES 2026',50,'⚽')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.UPfUh8IBNWXrd1zXtKlq5QHaEK?w=640&h=360&rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Red Dead Redemption"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Red+Dead+Redemption'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Red Dead Redemption</div>
+            <div class="product-specs">أكشن | مغامرة | 2010</div>
+            <div class="product-footer">
+              <div><div class="product-price">20 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('reddeadredemption','Red Dead Redemption',20,'🤠')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://wallpapers.com/images/hd/caption-ethan-winters-exploring-the-eerie-village-in-resident-evil-village-1lny39dkjzusfzqk.jpg"
+                 alt="Resident Evil Village "
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Resident+Evil+Village'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Resident Evil Village</div>
+            <div class="product-specs">رعب | مغامرة | 2021</div>
+            <div class="product-footer">
+              <div><div class="product-price">30 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('residentevilvillage','Resident Evil Village',30,'🧟')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://th.bing.com/th/id/R.41d0d3aaef6e854a0fb020de84eab374?rik=zvbX49Ofs%2bH4Iw&pid=ImgRaw&r=0"
+                 alt="Teenage Mutant Ninja Turtles - Out of the Shadows"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Teenage+Mutant+Ninja+Turtles+-+Out+of+the+Shadows'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Teenage Mutant Ninja Turtles - Out of the Shadows</div>
+            <div class="product-specs">أكشن | مغامرة | 2012</div>
+            <div class="product-footer">
+              <div><div class="product-price">5 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('teenagemutantninjaturtles','Teenage Mutant Ninja Turtles - Out of the Shadows',5,'🐢')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.lAvqO79DPzlxALZH6pvEVQHaEf?w=660&h=400&rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="The Witcher 3 Wild Hunt"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=The+Witcher+3+Wild+Hunt'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">The Witcher 3 Wild Hunt</div>
+            <div class="product-specs">أكشن | مغامرة | 2015</div>
+            <div class="product-footer">
+              <div><div class="product-price">50 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('thewitcher3','The Witcher 3 Wild Hunt',50,'🐺')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+                <div class="product-card" data-cat="pc">
+          <div class="product-thumb">
+            <img src="https://i.ytimg.com/vi/Frg3Pk6Rs78/maxresdefault.jpg"
+                 alt="Watch Dogs 2"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/460x215/111/555?text=Watch+Dogs+2'" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">PC</div>
+            <div class="product-name">Watch Dogs 2</div>
+            <div class="product-specs">أكشن | مغامرة | 2016</div>
+            <div class="product-footer">
+              <div><div class="product-price">30 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('watchdogs2','Watch Dogs 2',30,'🖥')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">4<span class="x">R</span></div>
+        <p class="footer-desc">وجهتك الأولى لكل حاجة تتعلق بالتقنية والجيمينج.</p>
+      </div>
+      <div><div class="footer-heading">الصفحات</div><ul class="footer-links"><li><a href="index.html">الرئيسية</a></li><li><a href="games.html">الألعاب</a></li><li><a href="desktops.html">كمبيوتر مكتبي</a></li></ul></div>
+      <div><div class="footer-heading">خدمات</div><ul class="footer-links"><li><a href="game-topup.html">شحن الألعاب</a></li><li><a href="services.html">الصيانة</a></li><li><a href="cart.html">عربة التسوق</a></li></ul></div>
+      <div><div class="footer-heading">تواصل</div><ul class="footer-links"><li><a href="contact.html">تواصل معنا</a></li><li><a href="tel:01060842931">01060842931</a></li><li><a href="https://wa.me/201060842931">واتساب</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>جميع الحقوق محفوظة &copy; 2025 4<span class="x">R</span></span>
+      <span>متجر الكمبيوتر والألعاب</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script>
+function filterGames(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.remove('btn-red'); b.classList.add('btn-outline');
+  });
+  btn.classList.remove('btn-outline'); btn.classList.add('btn-red');
+  document.querySelectorAll('#gamesGrid .product-card').forEach(card => {
+    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+  });
+}
+</script>
+<script src="js/ratings.js"></script>
+</body>
+</html>

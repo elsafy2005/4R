@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4R | تواصل معنا</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">4<span class="x">R</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="games.html">الألعاب</a></li>
+      <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
+      <li><a href="accessories.html" >إكسسوارات كمبيوتر</a></li>
+      <li><a href="mobile.html" >إكسسوارات موبيل</a></li>
+      <li><a href="game-topup.html">شحن الألعاب</a></li>
+      <li><a href="services.html">الصيانة</a></li>
+      <li><a href="reviews.html">التقييمات</a></li>
+      <li><a href="contact.html" class="active">تواصل معنا</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="nav-cart">🛒 السلة<span class="cart-badge">0</span></a>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="games.html">الألعاب</a></li>
+    <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
+    <li><a href="accessories.html" >إكسسوارات كمبيوتر</a></li>
+      <li><a href="mobile.html" >إكسسوارات موبيل</a></li>>
+    <li><a href="game-topup.html">شحن الألعاب</a></li>
+    <li><a href="services.html">الصيانة</a></li>
+    <li><a href="reviews.html">التقييمات</a></li>
+    <li><a href="contact.html" class="active">تواصل معنا</a></li>
+    <li><a href="cart.html">🛒 السلة</a></li>
+  </ul>
+  <div class="mobile-menu-footer">
+    <a href="https://wa.me/201060842931" target="_blank" rel="noreferrer">💬 واتساب: 01060842931</a>
+  </div>
+</div>
+
+<main>
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">الرئيسية</a><span class="sep">/</span><span>تواصل معنا</span></div>
+      <h1 class="page-title">📞 تواصل معنا</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">نحن هنا لمساعدتك</h2>
+      <p class="section-sub">تواصل معنا بأي طريقة تناسبك — هنرد عليك في أسرع وقت</p>
+
+      <div class="contact-grid">
+        <a href="tel:01060842931" class="contact-card">
+          <div class="contact-icon">📞</div>
+          <div><div class="contact-label">هاتف</div><div class="contact-value" dir="ltr">01060842931</div></div>
+        </a>
+        <a href="https://wa.me/201060842931" target="_blank" class="contact-card">
+          <div class="contact-icon">💬</div>
+          <div><div class="contact-label">واتساب</div><div class="contact-value" dir="ltr">01060842931</div></div>
+        </a>
+        <a href="mailto:4r.2021@gmail.com" class="contact-card">
+          <div class="contact-icon">📧</div>
+          <div><div class="contact-label">البريد الإلكتروني</div><div class="contact-value">4r.2021@gmail.com</div></div>
+        </a>
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <div><div class="contact-label">العنوان</div><div class="contact-value">اسكندريه ميامي الجديده شارع اسكوت</div></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label">مواعيد العمل</div>
+            <div class="contact-value">السبت – الخميس</div>
+            <div style="color:var(--gray);font-size:.85rem;margin-top:4px">11 صباحاً – 11 مساءً</div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">⚡</div>
+          <div>
+            <div class="contact-label">وقت الرد</div>
+            <div class="contact-value">خلال ساعة</div>
+            <div style="color:var(--gray);font-size:.85rem;margin-top:4px">في أوقات العمل</div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div style="margin-top:40px">
+        <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:16px">تابعنا على السوشيال ميديا</h3>
+        <div class="social-row">
+          <a href="https://www.facebook.com/4r.Group2/" target="_blank" class="social-btn">📘 فيسبوك</a>
+  
+        </div>
+      </div>
+
+     
+      <div class="form-box" style="margin-top:60px">
+        <h3>✉️ ابعتلنا رسالة</h3>
+        <form id="orderForm" onsubmit="submitContact(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>الاسم *</label>
+              <input type="text" id="cName" placeholder="اسمك" required />
+            </div>
+            <div class="form-group">
+              <label>الهاتف *</label>
+              <input type="tel" id="cPhone" placeholder="01000000000" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>الموضوع</label>
+            <input type="text" id="cSubject" placeholder="استفسار، شكوى، طلب..." />
+          </div>
+          <div class="form-group">
+            <label>الرسالة *</label>
+            <textarea id="cMessage" placeholder="اكتب رسالتك هنا..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="contactBtn">إرسال الرسالة</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo">4<span class="x">R</span></div><p class="footer-desc">وجهتك الأولى لكل حاجة تتعلق بالتقنية والجيمينج.</p></div>
+      <div><div class="footer-heading">الصفحات</div><ul class="footer-links"><li><a href="index.html">الرئيسية</a></li><li><a href="games.html">الألعاب</a></li><li><a href="desktops.html">كمبيوتر مكتبي</a></li></ul></div>
+      <div><div class="footer-heading">خدمات</div><ul class="footer-links"><li><a href="game-topup.html">شحن الألعاب</a></li><li><a href="services.html">الصيانة</a></li><li><a href="cart.html">عربة التسوق</a></li></ul></div>
+      <div><div class="footer-heading">تواصل</div><ul class="footer-links"><li><a href="contact.html">تواصل معنا</a></li><li><a href="tel:01060842931">01060842931</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>جميع الحقوق محفوظة &copy; 2025 4<span class="x">R</span></span></div>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbweLIVS6L2gKUd2yrqDHpmwQstAdnevsQVxWg5LhEVjzdi9r4X7h1ijShIEXJjV6QlJVw/exec";
+
+function submitContact(e) {
+  e.preventDefault();
+
+  const name    = document.getElementById('cName').value.trim();
+  const phone   = document.getElementById('cPhone').value.trim();
+  const subject = document.getElementById('cSubject').value.trim();
+  const message = document.getElementById('cMessage').value.trim();
+
+  const btn = document.getElementById('contactBtn');
+  btn.disabled = true;
+  btn.innerText = 'جاري الإرسال...';
+
+  /* ── WhatsApp ── */
+  const waMsg =
+    `💬 *رسالة جديدة — 4R*\n━━━━━━━━━━━━\n` +
+    `👤 ${name}\n📞 ${phone}\n` +
+    `${subject ? '📌 ' + subject + '\n' : ''}\n💬 ${message}`;
+  window.open('https://wa.me/201060842931?text=' + encodeURIComponent(waMsg), '_blank');
+
+  /* ── Google Sheet (FormData) ── */
+  const formData = new FormData();
+  formData.append("phone",   phone);
+  formData.append("pubg_id", name);
+  formData.append("package", (subject ? subject + ' | ' : '') + message);
+  formData.append("game",    "رسالة / شكوى — TechnoX");
+
+  fetch(SCRIPT_URL, { method: "POST", body: formData })
+    .then(() => { window.location.href = "thanks.html"; })
+    .catch(err => {
+      console.error(err);
+      window.location.href = "thanks.html";
+    });
+}
+</script>
+<script src="js/ratings.js"></script>
+</body>
+</html>
