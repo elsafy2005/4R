@@ -91,14 +91,60 @@
 
 
         <div class="hero-visual">
-          <img
-            src="img/c4c74e6f-1cd4-4949-813d-8eb2df25387b.jpg"
-            alt="TechnoX Gaming Setup"
-          />
-        </div>
 
-      </div>
-    </div>
+  <div class="hero-slider" id="heroSlider">
+
+    <a href="games.html" class="hero-slide active">
+      <img
+        src="https://i.ibb.co/Q3bFyvRf/Gemini-Generated-Image-v5cepnv5cepnv5ce.jpg"
+        alt="الألعاب"
+      />
+    </a>
+
+    <a href="desktops.html" class="hero-slide">
+      <img
+        src="https://i.ibb.co/GfnTJB9k/Gemini-Generated-Image-rfbup5rfbup5rfbu.jpg"
+        alt="كمبيوتر مكتبي"
+      />
+    </a>
+
+    <a href="accessories.html" class="hero-slide">
+      <img
+        src="https://i.ibb.co/F4fschsC/Gemini-Generated-Image-guka4hguka4hguka.jpg"
+        alt="إكسسوارات كمبيوتر"
+      />
+    </a>
+
+    <a href="mobile.html" class="hero-slide">
+      <img
+        src="https://i.ibb.co/PGGD3JzS/Gemini-Generated-Image-qnax56qnax56qnax.jpg"
+        alt="إكسسوارات موبيل"
+      />
+    </a>
+
+    <a href="game-topup.html" class="hero-slide">
+      <img
+        src="https://i.ibb.co/6KGSyHs/Gemini-Generated-Image-xf29ttxf29ttxf29.jpg"
+        alt="شحن الألعاب"
+      />
+    </a>
+
+   
+    <button class="hero-prev" id="heroPrev" aria-label="الصورة السابقة">
+      ❮
+    </button>
+
+    <button class="hero-next" id="heroNext" aria-label="الصورة التالية">
+      ❯
+    </button>
+
+  
+    <div class="hero-dots" id="heroDots"></div>
+
+  </div>
+
+</div>
+
   </section>
 
 
@@ -295,5 +341,79 @@
 
 <script src="js/cart.js"></script>
 <script src="js/ratings.js"></script>
+
+
+<script>
+  const slides = document.querySelectorAll(".hero-slide");
+  const dotsContainer = document.getElementById("heroDots");
+  const prevBtn = document.getElementById("heroPrev");
+  const nextBtn = document.getElementById("heroNext");
+
+  let currentSlide = 0;
+  let autoSlide;
+
+ 
+  slides.forEach((slide, index) => {
+    const dot = document.createElement("button");
+
+    dot.className = "hero-dot";
+    dot.setAttribute("aria-label", `الصورة ${index + 1}`);
+
+    if (index === 0) {
+      dot.classList.add("active");
+    }
+
+    dot.addEventListener("click", () => {
+      showSlide(index);
+      resetAutoSlide();
+    });
+
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll(".hero-dot");
+
+  function showSlide(index) {
+    slides.forEach(slide => {
+      slide.classList.remove("active");
+    });
+
+    dots.forEach(dot => {
+      dot.classList.remove("active");
+    });
+
+    currentSlide = (index + slides.length) % slides.length;
+
+    slides[currentSlide].classList.add("active");
+    dots[currentSlide].classList.add("active");
+  }
+
+  
+  nextBtn.addEventListener("click", () => {
+    showSlide(currentSlide + 1);
+    resetAutoSlide();
+  });
+
+  
+  prevBtn.addEventListener("click", () => {
+    showSlide(currentSlide - 1);
+    resetAutoSlide();
+  });
+
+  
+  function startAutoSlide() {
+    autoSlide = setInterval(() => {
+      showSlide(currentSlide + 1);
+    }, 3000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    startAutoSlide();
+  }
+
+  startAutoSlide();
+</script>
+
 </body>
 </html>
